@@ -1,24 +1,26 @@
-# README
+# Weather App 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Weather forecast demo app for Fligno take home exam.
 
-Things you may want to cover:
+## Requirements
 
-* Ruby version
+- Rails 7.1.3.2 
+- Ruby 3.1.0p0
 
-* System dependencies
+## Installation
 
-* Configuration
+1. Clone This repo.
+2. Install the gems:
 
-* Database creation
+   ```sh
+   bundle install
+   ```
+   
+## Run Test
+- tba
 
-* Database initialization
+## Screenshots
+- tba
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## References
+- [design inspiration](https://dribbble.com/shots/16727362-Weather-Dashboard)
