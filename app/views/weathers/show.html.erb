@@ -3,13 +3,13 @@
 
     <%= image_tag('icons/sunny.png', width: 180) %>
 
-    <h1 class='display-3'>69&deg;F</h1>
+    <h1 class='display-3'><%= @current['temperature_2m'] %>&deg;F</h1>
 
     <h3>Today</h3>
 
     <div class='d-flex flex-column'>
-      <span>Humidity: 81%</span>
-      <span>Wind: 81%</span>
+      <span>Humidity: <%= @current['relative_humidity_2m'] %>%</span>
+      <span>Wind: <%= @current['wind_speed_10m'] %> Km/h</span>
     </div>
 
   </div>

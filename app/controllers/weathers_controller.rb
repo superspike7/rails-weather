@@ -3,5 +3,10 @@
 # :nodoc: all
 class WeathersController < ApplicationController
   def index; end
-  def show; end
+
+  def show
+    location = Geocoder.search('manila').first.data
+
+    @current = OpenMeteo::Client.new(location).current
+  end
 end
