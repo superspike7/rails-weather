@@ -11,12 +11,11 @@ module OpenMeteo
       @location = location
     end
 
-    def daily
+    def weekly
       params = {
         latitude: location['lat'],
         longitude: location['lon'],
         emperature_unit: 'fahrenheit',
-        timezone: 'Asia/Bangkok',
         daily: 'weather_code,temperature_2m_max,wind_speed_10m_max'
       }
 
