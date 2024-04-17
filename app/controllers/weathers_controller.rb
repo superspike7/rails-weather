@@ -7,8 +7,13 @@ class WeathersController < ApplicationController
   end
 
   def show
-    location = Geocoder.search('manila').first.data
+    @location = Location.find_by(name: params[:id])
 
-    @current = OpenMeteo::Client.new(location).current
+    if @location.weather_data.nil?
+      weather_data = OpenMeteo::GetWeather.new(@location).call
+      @location.update!(weather_data:)
+    else
+      @weathers = Weathers.new(@location.weather_data)
+    end
   end
 end
