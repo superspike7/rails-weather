@@ -2,7 +2,7 @@
 
 module OpenMeteo
   # :nodoc: all
-  class Client
+  class GetWeather 
     BASE_URL = 'https://api.open-meteo.com/v1'
 
     attr_reader :location
@@ -11,7 +11,7 @@ module OpenMeteo
       @location = location
     end
 
-    def weekly
+    def call
       params = {
         latitude: location['lat'],
         longitude: location['lon'],
