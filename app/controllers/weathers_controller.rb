@@ -2,7 +2,9 @@
 
 # :nodoc: all
 class WeathersController < ApplicationController
-  def index; end
+  def index
+    @locations = Location.all
+  end
 
   def show
     location = Geocoder.search('manila').first.data
