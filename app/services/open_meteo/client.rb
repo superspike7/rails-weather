@@ -11,16 +11,16 @@ module OpenMeteo
       @location = location
     end
 
-    def current
+    def daily
       params = {
         latitude: location['lat'],
         longitude: location['lon'],
         emperature_unit: 'fahrenheit',
         timezone: 'Asia/Bangkok',
-        current: 'temperature_2m,relative_humidity_2m,precipitation,rain,weather_code,wind_speed_10m'
+        daily: 'weather_code,temperature_2m_max,wind_speed_10m_max'
       }
 
-      send_request(:get, 'forecast', params)['current']
+      send_request(:get, 'forecast', params)['daily']
     end
 
     private
