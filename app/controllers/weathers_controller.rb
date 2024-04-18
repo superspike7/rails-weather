@@ -9,7 +9,7 @@ class WeathersController < ApplicationController
   def show
     @location = Location.find_by(name: params[:id])
 
-    if @location.weather_data.nil?
+    if @location.weather_data.nil? || @location.weather_outdated?
       weather_data = OpenMeteo::GetWeather.new(@location).call
       @location.update!(weather_data:)
     else
