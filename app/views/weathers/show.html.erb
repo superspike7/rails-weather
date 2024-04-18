@@ -27,6 +27,7 @@
         <div class='d-flex flex-column gap-3 justify-content-around align-items-center bg-dark-subtle rounded-3 p-2'>
           <div class='text-center'>
             <h3><%= weather.day %></h3>
+            <p><%= weather.description %></p>
           </div>
           <%= image_tag(weather.icon_url, width: 100) %>
           <p class='display-6'><%= weather.temperature %>&deg;F</p>
