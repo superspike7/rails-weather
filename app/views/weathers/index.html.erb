@@ -8,8 +8,8 @@
                     bg-primary-hover
                     '>
 
-          <%= image_tag('icons/sunny.png', width: 120) %>
-          <h2 class='display-5'>69&deg;F</h2>
+          <%= image_tag( location.current.icon_url, width: 120) %>
+          <h2 class='display-5'><%= location.current.temperature %>&deg;F</h2>
           <h2><%= location.name.capitalize %></h2>
         </div>
       <% end %>
