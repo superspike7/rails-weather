@@ -20,7 +20,7 @@
 
           <%= image_tag( location.current.icon_url, width: 120) %>
           <h2 class='display-5'><%= location.current.temperature %>&deg;F</h2>
-          <h2><%= location.name.capitalize %></h2>
+          <h2><%= location.name.titleize %></h2>
         </div>
       <% end %>
     <% end %>
