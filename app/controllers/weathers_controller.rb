@@ -16,4 +16,9 @@ class WeathersController < ApplicationController
       @location
     end
   end
+
+  def search
+    locations = Geocoder.search(params[:term])
+    render json: locations
+  end
 end

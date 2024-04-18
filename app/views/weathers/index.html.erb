@@ -1,4 +1,13 @@
 <div class='container-md bg-light rounded-3 d-flex flex-column p-4'>
+
+  <div data-controller="location-search" style="height: 110px">
+    <p class="display-6 text-center">Search Location</p>
+    <input type="text" data-location-search-target="input" 
+                       placeholder="New York" class="d-block w-75 rounded-3 p-4 text-center border h4 mx-auto border-primary mb-0" 
+                       style="height: 32px">
+    <ul data-location-search-target="results" class="w-75 mx-auto list-group"></ul>
+  </div>
+
   <div style='height: 660px' class='d-flex flex-wrap p-4 gap-3 overflow-scroll'>
     <% @locations.each do |location| %>
       <%= link_to "weathers/#{location.name}", class: 'block text-decoration-none text-reset' do %>
