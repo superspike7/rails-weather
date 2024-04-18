@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 class Location < ApplicationRecord
-  has_many :weathers
+  include Weatherable
 
-  def weather_outdated?
-    weather_data['time'].first != Date.today.to_s
-  end
+  has_many :weathers
 end

@@ -1,18 +1,18 @@
 <div class='container-md bg-light rounded-3 d-flex p-4'>
   <div class='d-flex flex-column bg-primary-subtle rounded-3 align-items-center justify-content-around p-5 gap-4'>
 
-    <%= image_tag(@weathers.current.icon_url, width: 180) %>
+    <%= image_tag(@location.current.icon_url, width: 180) %>
 
-    <h1 class='display-3'><%= @weathers.current.temperature %>&deg;F</h1>
+    <h1 class='display-3'><%= @location.current.temperature %>&deg;F</h1>
 
     <div class='text-center'>
       <h3>Today</h3>
-      <h4><%= @weathers.current.day %></h4>
-      <p><%= @weathers.current.description%></p>
+      <h4><%= @location.current.day %></h4>
+      <p><%= @location.current.description%></p>
     </div>
 
     <div class='d-flex flex-column'>
-      <span>Wind: <%= @weathers.current.wind %> KM/H</span>
+      <span>Wind: <%= @location.current.wind %> KM/H</span>
     </div>
 
   </div>
@@ -23,7 +23,7 @@
     </div>
 
     <div class='flex-fill p-4 d-flex justify-content-between'>
-      <% @weathers.upcoming.each do |weather| %>
+      <% @location.upcoming.each do |weather| %>
         <div class='d-flex flex-column gap-3 justify-content-around align-items-center bg-dark-subtle rounded-3 p-2'>
           <div class='text-center'>
             <h3><%= weather.day %></h3>

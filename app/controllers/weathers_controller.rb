@@ -13,7 +13,7 @@ class WeathersController < ApplicationController
       weather_data = OpenMeteo::GetWeather.new(@location).call
       @location.update!(weather_data:)
     else
-      @weathers = Weathers.new(@location.weather_data)
+      @location
     end
   end
 end
