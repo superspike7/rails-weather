@@ -3,7 +3,7 @@
 # :nodoc: all
 class WeathersController < ApplicationController
   def index
-    @locations = Location.all
+    @locations = Location.all.where.not(weather_data: nil)
   end
 
   def show
@@ -12,13 +12,8 @@ class WeathersController < ApplicationController
     if @location.weather_data.nil? || @location.weather_outdated?
       weather_data = OpenMeteo::GetWeather.new(@location).call
       @location.update!(weather_data:)
-    else
-      @location
     end
-  end
 
-  def search
-    locations = Geocoder.search(params[:term])
-    render json: locations
+    @location
   end
 end
