@@ -1,6 +1,6 @@
 # Weather App 
 
-Weather forecast demo app for Fligno take home exam.
+Weather forecast demo app.
 
 ## Features
 
