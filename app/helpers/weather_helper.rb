@@ -8,11 +8,11 @@ module WeatherHelper
     '0' => {
       'day' => {
         'description' => 'Sunny',
-        'image' => 'http=>//openweathermap.org/img/wn/01d@2x.png'
+        'image' => 'http://openweathermap.org/img/wn/01d@2x.png'
       },
       'night' => {
         'description' => 'Clear',
-        'image' => 'http=>//openweathermap.org/img/wn/01n@2x.png'
+        'image' => 'http://openweathermap.org/img/wn/01n@2x.png'
       }
     },
     '1' => {
